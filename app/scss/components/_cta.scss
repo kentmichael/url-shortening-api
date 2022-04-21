@@ -1,0 +1,18 @@
+@use '../util/' as *;
+
+.cta {
+  display: block;
+  background-color: var(--cyan);
+  padding-block: rem(16);
+  border-radius: rem(30);
+  transition: opacity 300ms ease-in;
+
+  &:hover {
+    opacity: .5;
+  }
+
+  @include breakpoint-up(medium) {
+    padding-block: rem(10);
+    padding-inline: rem(25);
+  }
+}

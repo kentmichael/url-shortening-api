@@ -1,2 +1,2 @@
-"use strict";console.log("Hello World!");
+"use strict";var menuButton=document.querySelector("#menu"),menuModal=document.querySelector("#menu-modal");function checkModalStatus(){return null!==menuModal.getAttribute("open")}menuButton.addEventListener("click",(function(){if(checkModalStatus())return menuModal.close();menuModal.show()}));
 //# sourceMappingURL=script.js.map

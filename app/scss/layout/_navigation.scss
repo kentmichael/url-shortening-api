@@ -1,2 +1,77 @@
 @use '../util/' as *;
 
+.nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: rem(40);
+  padding-bottom: rem(22);
+
+  @include breakpoint-up(medium) {
+    gap: rem(45);
+  }
+
+  img {
+    width: rem(120);
+    height: rem(33);
+    cursor: pointer;
+  }
+
+  div {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    width: rem(24);
+    height: rem(21);
+    cursor: pointer;
+
+    @include breakpoint-up(medium) {
+      display: none;
+    }
+
+    span {
+      display: block;
+      height: rem(3);
+      width: 100%;
+      background-color: var(--gray-violet);
+    }
+  }
+
+  &__links {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: rem(30);
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: rem(14);
+    font-weight: 700;
+
+    @include breakpoint-down(small) {
+      display: none;
+    }
+
+    li {
+
+      a {
+        color: var(--gray-violet);
+        transition: all 300ms ease-in;
+
+        &:hover:not(.cta) {
+          color: var(--cyan);
+        }
+      }
+
+      .cta {
+        color: var(--white);
+      }
+    }
+
+    .separator {
+      flex-grow: 1;
+    }
+  }
+}

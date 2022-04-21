@@ -1,0 +1,41 @@
+@use '../util/' as *;
+
+#menu-modal {
+  position: absolute;
+  top: rem(95);
+  border: none;
+  width: 100%;
+  background-color: transparent;
+}
+
+.menu-links {
+  margin: 0;
+  border-radius: rem(10);
+  padding-block: rem(40);
+  padding-inline: rem(24);
+  list-style-type: none;
+  background-color: var(--dk-violet);
+
+  > *:not(:last-child) {
+    margin-bottom: rem(40);
+  }
+
+  li {
+    font-size: rem(14);
+    font-weight: 700;
+    text-align: center;
+
+    hr {
+      background-color: var(--gray);
+    }
+
+    a {
+      color: var(--white);
+      transition: all 200ms ease-in;
+
+      &:hover:not(.cta) {
+        color: var(--cyan);
+      }
+    }
+  }
+}

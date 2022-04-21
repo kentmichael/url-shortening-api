@@ -1,17 +1,17 @@
 @use 'sass:map';
 
-// 640px, 1150px, 1400px
+// 700px, 1150px, 1400px
 $breakpoint-up: (
-  "medium": 40em,
+  "medium": 43.75em,
   "large": 71.875em,
   "xlarge": 87.5em
 );
 
-// 639px, 1149px, 1399px
+// 699px, 1149px, 1399px
 $breakpoint-down: (
-  "small": 39.9375em,
-  "medium": 71.8125em,
-  "large": 87.4375em
+  "small": 43.70em,
+  "medium": 71.82em,
+  "large": 87.44em
 );
 
 @mixin breakpoint-up($size) {
