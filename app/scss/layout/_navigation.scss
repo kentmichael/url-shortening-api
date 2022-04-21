@@ -9,6 +9,8 @@
   padding-bottom: rem(22);
 
   @include breakpoint-up(medium) {
+    padding-top: rem(48);
+    padding-bottom: rem(77);
     gap: rem(45);
   }
 
@@ -56,17 +58,22 @@
 
     li {
 
-      a {
+      a:not(.cta) {
         color: var(--gray-violet);
         transition: all 300ms ease-in;
 
-        &:hover:not(.cta) {
+        &:hover {
           color: var(--cyan);
         }
       }
 
-      .cta {
-        color: var(--white);
+      > .cta {
+        padding-block: rem(16);
+
+        @include breakpoint-up(medium) {
+          padding-block: rem(10);
+          padding-inline: rem(25);
+        }
       }
     }
 

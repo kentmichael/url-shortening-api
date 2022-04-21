@@ -1,0 +1,94 @@
+@use '../util/' as *;
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: rem(45);
+
+  @include breakpoint-up(medium) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+  }
+
+  @include breakpoint-up(large) {
+    gap: rem(110);
+  }
+
+  &__image {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: rem(339);
+
+    @include breakpoint-up(medium) {
+      height: rem(483);
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      height: inherit;
+      position: absolute;
+      top: 0;
+      right: -40%;
+      bottom: 0;
+      left: 6%;
+      background-image: url('../images/illustration-working.svg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center center;
+
+      @include breakpoint-up(medium) {
+        right: -65%;
+        left: 0;
+      }
+    }
+  }
+
+  &__content {
+    text-align: center;
+
+    @include breakpoint-up(medium) {
+      place-self: center;
+      text-align: left;
+    }
+
+    @include breakpoint-up(medium) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    h1 {
+      margin-bottom: rem(27);
+      font-size: rem(34);
+      color: var(--black);
+
+      @include breakpoint-up(medium) {
+        margin-bottom: rem(24);
+        font-size: rem(59);
+      }
+    }
+
+    p {
+      margin-bottom: rem(36);
+      color: var(--gray-violet);
+
+      @include breakpoint-up(medium) {
+        margin-bottom: rem(44);
+      }
+    }
+
+    a {
+      padding-block: rem(16); // Save in cta
+      padding-inline: rem(40);
+      font-size: rem(16);
+
+      @include breakpoint-up(medium) {
+        padding-inline: rem(55);
+      }
+    }
+  }
+}

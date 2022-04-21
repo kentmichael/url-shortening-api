@@ -4,4 +4,8 @@
   max-width: rem(1108);
   margin: 0 auto;
   padding-inline: rem(24);
+
+  @include breakpoint-up(large) {
+    padding-inline: 0;
+  }
 }

@@ -2,10 +2,11 @@
 
 #menu-modal {
   position: absolute;
-  top: rem(95);
+  top: rem(78);
   border: none;
   width: 100%;
   background-color: transparent;
+  z-index: 1;
 }
 
 .menu-links {
@@ -17,7 +18,7 @@
   background-color: var(--dk-violet);
 
   > *:not(:last-child) {
-    margin-bottom: rem(40);
+    margin-bottom: rem(34);
   }
 
   li {
@@ -30,12 +31,17 @@
     }
 
     a {
+      width: 100%;
       color: var(--white);
       transition: all 200ms ease-in;
 
       &:hover:not(.cta) {
         color: var(--cyan);
       }
+    }
+
+    > .cta {
+      padding-block: rem(16);
     }
   }
 }
