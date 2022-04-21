@@ -1,0 +1,58 @@
+@use '../util/' as *;
+
+.shorten {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: rem(16);
+  border-radius: rem(10);
+  padding: rem(24);
+  background-color: var(--dk-violet);
+  background-image: url('../images/bg-shorten-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: 75% 80%;
+  background-position: top right;
+
+  @include breakpoint-up(medium) {
+    flex-flow: row wrap;
+    gap: rem(23);
+    padding-block: rem(50);
+    padding-inline: rem(64);
+    background-image: url('../images/bg-shorten-desktop.svg');
+    background-size: 100% 100%;
+    background-position: center center;
+  }
+
+  input[type='url'] {
+    padding: rem(18);
+    border: none;
+    border-radius: rem(5);
+    font-size: rem(13);
+    font-weight: 500;
+    font-family: var(--font);
+    color: var(--very-dk-blue);
+
+    @include breakpoint-up(medium) {
+      flex-grow: 4;
+      padding-block: rem(20.5);
+      padding-inline: rem(32);
+      font-size: rem(15);
+    }
+  }
+
+  button {
+    border: none;
+    border-radius: rem(5);
+    padding-block: rem(16);
+    font-size: rem(15);
+    font-weight: 700;
+    font-family: var(--font);
+    color: var(--white);
+    background-color: var(--cyan);
+    cursor: pointer;
+
+    @include breakpoint-up(medium) {
+      flex-grow: 1;
+      font-size: rem(17);
+    }
+  }
+}

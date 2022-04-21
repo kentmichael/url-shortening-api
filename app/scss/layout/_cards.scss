@@ -1,0 +1,99 @@
+@use '../util/' as *;
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  //gap: rem(90);
+
+  @include breakpoint-up(large) {
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    height: rem(360);
+  }
+  
+  &__section {
+    position: relative;
+    width: 100%;
+    border-radius: rem(5);
+    padding-top: rem(84);
+    padding-inline: rem(36);
+    padding-bottom: rem(46);
+    background-color: var(--white);
+
+    @include breakpoint-up(large) {
+      text-align: left;
+    }
+
+    div {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: rem(88);
+      height: rem(88);
+      border-radius: 50%;
+      background-color: var(--dk-violet);
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      @include breakpoint-up(large) {
+        left: 10%;
+        transform: translate(0, -50%);
+      }
+    }
+
+    h3 {
+      margin-bottom: rem(29);
+      font-size: rem(18);
+      color: var(--very-dk-violet);
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: rem(12);
+    }
+
+    &--brandicon {
+      background-image: url('/images/icon-brand-recognition.svg');
+      background-size: rem(41) rem(41);
+    }
+
+    &--recordicon {
+      background-image: url('/images/icon-detailed-records.svg');
+      background-size: rem(40) rem(40);
+    }
+
+    &--customicon {
+      background-image: url('/images/icon-fully-customizable.svg');
+      background-size: rem(48) rem(48);
+    }
+  }
+
+  .top {
+    place-self: start;
+  }
+
+  .center {
+    place-self: center;
+  }
+
+  .bottom {
+    place-self: end;
+  }
+
+  span {
+    display: block;
+    height: rem(90);
+    width: rem(8);
+    margin-inline: auto;
+    background-color: var(--cyan);
+
+    @include breakpoint-up(large) {
+      place-self: center;
+      height: rem(8);
+      width: rem(28);  
+      margin: 0;
+    }
+  }
+}

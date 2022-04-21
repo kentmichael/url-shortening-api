@@ -1,0 +1,35 @@
+@use '../util/' as *;
+
+.footer {
+  text-align: center;
+
+  &__section1 {
+    padding-block: rem(96);
+    background-color: var(--dk-violet);
+    background-image: url('../images/bg-boost-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+
+    @include breakpoint-up(medium) {
+      padding-block: rem(71);
+      background-image: url('../images/bg-boost-desktop.svg');
+    }
+
+    h2 {
+      margin-bottom: rem(27);
+      font-size: rem(23);
+      color: var(--white);
+    }
+
+    a {
+      padding-block: rem(16);
+      padding-inline: rem(52);
+      font-size: rem(16);
+    }
+  }
+
+  &__section2 {
+
+  }
+}

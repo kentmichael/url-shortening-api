@@ -1,0 +1,45 @@
+@use '../util/' as *;
+
+.features {
+  position: relative;
+  padding-block: rem(80);
+  background-color: hsl(0, 0%, 90%);
+
+  &__shorten {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+
+  &__info {
+    padding-top: rem(95);
+    text-align: center;
+
+    h2 {
+      margin-bottom: rem(35);
+      font-size: rem(23);
+      color: var(--very-dk-blue);
+
+      @include breakpoint-up(medium) {
+        margin-bottom: rem(33);
+        font-size: rem(33);
+      }
+    }
+
+    p {
+      margin-bottom: rem(97);
+      padding-inline: rem(20);
+      font-size: rem(14);
+      line-height: 2;
+      color: var(--gray-violet);
+
+      @include breakpoint-up(large) {
+        margin-bottom: rem(105);
+        padding-inline: rem(330);
+        font-size: rem(15);
+      }
+    }
+  }
+}
