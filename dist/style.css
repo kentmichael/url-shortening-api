@@ -1,0 +1,2 @@
+html{box-sizing:border-box;font-family:var(--font);font-size:100%}*,:after,:before{box-sizing:inherit}body{color:var(--gray);font-weight:500;margin:0;padding:0}:root{--white:#fff;--black:#000;--cyan:#2acfcf;--dk-violet:#3b3054;--red:#f46262;--gray:#bfbfbf;--gray-violet:#9e9aa7;--very-dk-blue:#35323e;--very-dk-violet:#232127;--font:"Poppins",sans-serif}.container{margin:0 auto;max-width:67.5rem}h1,h2,h3{font-weight:700;line-height:1.1;margin:0}p{margin:0}a:hover,a:link,a:visited{text-decoration:none}
+/*# sourceMappingURL=style.css.map */
