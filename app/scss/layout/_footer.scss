@@ -1,10 +1,10 @@
 @use '../util/' as *;
 
 .footer {
-  text-align: center;
 
   &__section1 {
     padding-block: rem(96);
+    text-align: center;
     background-color: var(--dk-violet);
     background-image: url('../images/bg-boost-mobile.svg');
     background-repeat: no-repeat;
@@ -20,6 +20,10 @@
       margin-bottom: rem(27);
       font-size: rem(23);
       color: var(--white);
+
+      @include breakpoint-up(medium) {
+        font-size: rem(33);
+      }
     }
 
     a {
@@ -29,7 +33,30 @@
     }
   }
 
-  &__section2 {
+  > div {
+    background-color: var(--very-dk-violet);
+  }
 
+  &__section2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding-block: rem(54);
+
+    @include breakpoint-up(large) {
+      grid-template-columns: 1fr 2fr;
+      padding-block: rem(74);
+    }
+
+    img {
+      place-self: center;
+      width: rem(120);
+      height: rem(35);
+      margin-bottom: rem(53);
+
+      @include breakpoint-up(large) {
+        place-self: start;
+      }
+    }
   }
 }

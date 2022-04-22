@@ -22,7 +22,36 @@
     background-position: center center;
   }
 
-  input[type='url'] {
+  &__error {
+
+    @include breakpoint-down(large) {
+      gap: rem(36);
+    }
+  }
+
+  .input-label {
+    position: relative;
+
+    @include breakpoint-up(medium) {
+      flex-grow: 4;
+    }
+
+    span {
+      position: absolute;
+      bottom: -35%;
+      display: block;
+      font-size: rem(11);
+      font-style: italic;
+      color: var(--red);
+
+      @include breakpoint-up(medium) {
+        font-size: rem(13);
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
     padding: rem(18);
     border: none;
     border-radius: rem(5);
@@ -37,9 +66,14 @@
       padding-inline: rem(32);
       font-size: rem(15);
     }
+
+    &--error {
+      border: rem(3) solid var(--red);
+      color: var(--red);
+    }
   }
 
-  button {
+  &__submit {
     border: none;
     border-radius: rem(5);
     padding-block: rem(16);
