@@ -2,7 +2,8 @@
 
 .features {
   position: relative;
-  padding-block: rem(80);
+  padding-top: rem(100);
+  padding-bottom: rem(80);
   background-color: hsl(0, 0%, 90%);
 
   &__shorten {
@@ -11,6 +12,45 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+  }
+
+  &__results {
+
+    > *:not(:last-child) {
+      margin-bottom: rem(22);
+    }
+
+    div {
+      display: flex;
+      flex-flow: column wrap;
+      gap: rem(15);
+      border-radius: rem(5);
+      padding: rem(16);
+      background-color: var(--white);
+    }
+
+    &--link {
+      border-bottom: rem(1) solid var(--gray);
+      padding-bottom: rem(15);
+      color: var(--very-dk-blue);
+    }
+
+    &--shortenlink {
+      color: var(--cyan);
+    }
+
+    button {
+      border: none;
+      border-radius: rem(5);
+      padding-block: rem(15);
+      font-size: rem(12);
+      color: var(--white);
+      cursor: pointer;
+    }
+
+    &--copiedlink {
+      background-color: var(--dk-violet);
+    }
   }
 
   &__info {

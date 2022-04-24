@@ -55,17 +55,17 @@
     }
 
     &--brandicon {
-      background-image: url('/images/icon-brand-recognition.svg');
+      background-image: url('../images/icon-brand-recognition.svg');
       background-size: rem(41) rem(41);
     }
 
     &--recordicon {
-      background-image: url('/images/icon-detailed-records.svg');
+      background-image: url('../images/icon-detailed-records.svg');
       background-size: rem(40) rem(40);
     }
 
     &--customicon {
-      background-image: url('/images/icon-fully-customizable.svg');
+      background-image: url('../images/icon-fully-customizable.svg');
       background-size: rem(48) rem(48);
     }
   }
