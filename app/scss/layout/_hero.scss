@@ -16,6 +16,10 @@
     gap: rem(110);
   }
 
+  @include breakpoint-down(large) {
+    overflow-x: hidden;
+  }
+
   &__image {
     position: relative;
     display: block;
